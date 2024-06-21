@@ -23,3 +23,10 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+Cypress.Commands.add('addTodo', (value) => {
+    cy.get('[data-cy=todo-input]').type(value)
+    cy.get('[data-cy=todo-submit-button]').click()
+   });
+   
